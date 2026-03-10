@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stemwerk-core"
+version = "0.1.0"
+description = "AI stem separation engine for the flarkAUDIO ecosystem."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "flarkAUDIO" }]
+dependencies = ["audio-separator[cpu]", "soundfile", "torch"]
+
+[project.optional-dependencies]
+gpu = ["audio-separator[gpu]"]
+rocm = ["torch-rocm"]
+directml = ["torch-directml"]
+
+[project.urls]
+Homepage = "https://github.com/flarkflarkflark/stemwerk-core"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/stemwerk_core"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
