@@ -10,7 +10,13 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [{ name = "flarkAUDIO" }]
-dependencies = ["audio-separator[cpu]", "soundfile", "torch"]
+dependencies = [
+  "audio-separator[cpu]",
+  "soundfile",
+  "torch",
+  "onnxruntime>=1.21,<1.22",
+  "onnx>=1.17,<1.18",
+]
 
 [project.optional-dependencies]
 gpu = ["audio-separator[gpu]"]
