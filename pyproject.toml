@@ -18,7 +18,7 @@ rocm = ["torch-rocm"]
 directml = ["torch-directml"]
 
 [project.urls]
-Homepage = "https://github.com/flarkflarkflark/stemwerk-core"
+Homepage = "https://github.com/flarkflarkflark/STEMwerk-core"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/stemwerk_core"]

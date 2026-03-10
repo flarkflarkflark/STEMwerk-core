@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import shutil
 import threading
 import time
 import warnings
@@ -282,8 +283,6 @@ class StemSeparator:
                         if output_file != new_path:
                             if new_path.exists():
                                 new_path.unlink()
-                            import shutil
-
                             shutil.move(str(output_file), str(new_path))
                         result[stem_name] = new_path
                         matched = True
