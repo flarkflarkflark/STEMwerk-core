@@ -1,6 +1,6 @@
 # STEMwerk-core
 
-stemwerk-core is the AI stem separation engine for the flarkAUDIO ecosystem.
+stemwerk-core is the stem separation engine for the flarkAUDIO ecosystem.
 It provides a clean Python API around the audio-separator backend.
 
 ## Install
